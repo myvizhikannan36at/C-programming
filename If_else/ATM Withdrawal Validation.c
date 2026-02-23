@@ -9,6 +9,7 @@ int main() {
     }else{
         printf("Invalid amount");
     }
+
     
     return 0;
 }
