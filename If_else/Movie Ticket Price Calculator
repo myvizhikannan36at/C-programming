@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    int age;
+    scanf("%d", &age);
+
+    if(age < 5)
+        printf("Free Entry");
+    else if(age <= 17)
+        printf("Child Ticket - Rs.100");
+    else if(age <= 59)
+        printf("Adult Ticket - Rs.200");
+    else
+        printf("Senior Citizen Ticket - Rs.150");
+
+    return 0;
+}
