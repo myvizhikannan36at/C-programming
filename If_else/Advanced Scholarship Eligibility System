@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int marks, attendance, sports_cert;
+    float annual_income;
+
+    printf("Enter Marks: ");
+    scanf("%d", &marks);
+
+    printf("Enter Attendance Percentage: ");
+    scanf("%d", &attendance);
+
+    printf("Enter Annual Income: ");
+    scanf("%f", &annual_income);
+
+    printf("Sports Certificate? (1 = Yes, 0 = No): ");
+    scanf("%d", &sports_cert);
+
+    if (attendance < 60) {
+        printf("Not Eligible (Low Attendance)\n");
+    }
+    else if (marks >= 90 && attendance >= 85 && annual_income <= 300000) {
+        printf("Full Scholarship Granted\n");
+    }
+    else if (marks >= 80 && attendance >= 75 && annual_income <= 500000) {
+        printf("Half Scholarship Granted\n");
+    }
+    else if (marks >= 70 && attendance >= 65 && sports_cert == 1) {
+        printf("Sports Scholarship Granted\n");
+    }
+    else if (marks >= 85 && annual_income > 500000) {
+        printf("Merit Certificate Only\n");
+    }
+    else {
+        printf("Not Eligible\n");
+    }
+
+    return 0;
+}
